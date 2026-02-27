@@ -1,0 +1,138 @@
+import React from 'react';
+import Link from 'next/link';
+
+export function Stitch_4524d2f7ba984163b5b37993bb9b0290() {
+  return (
+    <>
+
+{/* Header */}
+<header className="w-full border-b border-primary/20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md sticky top-0 z-50">
+<div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
+<div className="flex items-center gap-3 text-slate-900 dark:text-white">
+<div className="size-8 text-primary">
+<svg className="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 className="text-xl font-bold tracking-tight">Sanwariya Gold</h2>
+</div>
+<nav className="hidden md:flex flex-1 justify-end gap-10 items-center">
+<div className="flex gap-8">
+<Link className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" href="/collections">Collections</Link>
+<Link className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" href="#">High Jewelry</Link>
+<Link className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" href="/heritage">Our Story</Link>
+<Link className="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" href="#">Temple</Link>
+</div>
+<div className="flex gap-4 border-l border-primary/20 pl-6">
+<button className="text-slate-900 dark:text-white hover:text-primary transition-colors">
+<span className="material-symbols-outlined">search</span>
+</button>
+<Link href="/account" className="text-slate-900 dark:text-white hover:text-primary transition-colors">
+<span className="material-symbols-outlined">person</span>
+</Link>
+<Link href="/cart" className="text-slate-900 dark:text-white hover:text-primary transition-colors">
+<span className="material-symbols-outlined">shopping_bag</span>
+</Link>
+</div>
+</nav>
+</div>
+</header>
+{/* Main Content */}
+<main className="flex-grow flex flex-col items-center justify-center py-16 px-4 relative overflow-hidden">
+{/* Background decorative elements */}
+<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-10">
+<div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[100px]"></div>
+<div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-maroon/30 rounded-full blur-[100px]"></div>
+</div>
+<div className="relative z-10 w-full max-w-4xl flex flex-col items-center gap-12 text-center">
+{/* Success Icon */}
+<div className="relative">
+<div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+<div className="w-32 h-32 rounded-full border-2 border-primary/50 flex items-center justify-center bg-background-dark/50 backdrop-blur-sm relative">
+<div className="w-24 h-24 rounded-full border border-primary flex items-center justify-center">
+<span className="material-symbols-outlined text-primary text-6xl">check_circle</span>
+</div>
+</div>
+</div>
+{/* Headlines */}
+<div className="space-y-4">
+<h1 className="font-cormorant italic text-5xl md:text-[56px] font-medium text-primary leading-tight">
+                    Your Gold is Being Blessed.
+                </h1>
+<p className="text-slate-400 max-w-xl mx-auto text-lg font-light leading-relaxed">
+                    Order <span className="text-white font-medium">#SG-2024-1847</span> has been confirmed. As per our sacred tradition, your selected piece will be offered at the Sanwariya Ji shrine for blessings before beginning its journey to you.
+                </p>
+</div>
+{/* Order Details Card (Dark Maroon Theme) */}
+<div className="w-full max-w-2xl bg-gradient-to-br from-[#2a1212] to-[#1a0f0f] border border-[#4a2e2e] rounded-xl overflow-hidden shadow-2xl">
+{/* Header of Card */}
+<div className="bg-black/20 px-6 py-4 flex justify-between items-center border-b border-white/5">
+<span className="text-primary/80 text-sm uppercase tracking-widest font-semibold">Order Summary</span>
+<span className="text-slate-400 text-sm">Estimated Delivery: Oct 24, 2024</span>
+</div>
+<div className="p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
+{/* Product Image */}
+<div className="w-full md:w-1/3 aspect-square rounded-lg bg-center bg-cover border border-white/10 shadow-inner relative group overflow-hidden" data-alt="Gold temple necklace jewelry set on dark background" style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqWjMBCcSwx9QJEOJrhs_qG_TUEzZzQxCCN7WPwxgUO3-oOknAENfcZlOJN50pgMmY_6_KCA5MeWQ8a9B7IehL8u5S1Q51qwRxH_nE6SQwD0FO5PAWOeefY1SEotAScb6kU_Lq8f1-efTJWG27oe-v89veVxLa6YpehGbJA4oeO4II0Z870hChIRsTDtTAg-CRnv2245gW255lzNf_luBJVHuqNjg9L6OCbzh7nykRYWDvq3iUOGtcfY94qli5RQssaz0ed1tXjw')"}}>
+<div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500"></div>
+</div>
+{/* Details */}
+<div className="flex-1 flex flex-col gap-4 text-left w-full">
+<div>
+<h3 className="text-white text-xl font-bold font-cormorant tracking-wide">Temple Necklace Set</h3>
+<p className="text-primary/80 text-sm">22K Gold • Antique Finish</p>
+</div>
+<div className="h-px w-full bg-white/10"></div>
+<div className="space-y-1">
+<p className="text-slate-400 text-xs uppercase tracking-wider">Shipping to</p>
+<p className="text-slate-200 text-sm font-medium">123 Luxury Lane, Malabar Hill</p>
+<p className="text-slate-200 text-sm font-medium">Mumbai, Maharashtra 400006</p>
+</div>
+<div className="mt-2 pt-4 border-t border-white/10 flex justify-between items-end">
+<div className="flex flex-col">
+<span className="text-slate-500 text-xs">Total Amount</span>
+<span className="text-white font-bold text-lg">₹ 4,85,000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+{/* CTAs */}
+<div className="flex flex-col sm:flex-row gap-4 w-full max-w-[480px] justify-center pt-4">
+<button className="flex-1 h-14 bg-primary hover:bg-yellow-400 text-background-dark font-bold text-sm tracking-[0.1em] uppercase rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span>Track Your Order</span>
+<span className="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button className="flex-1 h-14 bg-transparent border border-slate-600 hover:border-primary text-slate-300 hover:text-primary font-bold text-sm tracking-[0.1em] uppercase rounded-lg transition-all flex items-center justify-center gap-2">
+<span className="material-symbols-outlined text-lg">download</span>
+<span>Download Receipt</span>
+</button>
+</div>
+</div>
+</main>
+{/* Footer */}
+<footer className="border-t border-slate-800 bg-background-dark py-12 px-6">
+<div className="max-w-[1440px] mx-auto flex flex-col items-center gap-8">
+<div className="flex flex-wrap justify-center gap-8 md:gap-16">
+<Link className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span className="material-symbols-outlined group-hover:scale-110 transition-transform">chat</span>
+<span className="text-sm font-medium tracking-wide">WhatsApp Support</span>
+</Link>
+<Link className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group" href="/collections">
+<span className="material-symbols-outlined group-hover:scale-110 transition-transform">explore</span>
+<span className="text-sm font-medium tracking-wide">Continue Exploring</span>
+</Link>
+<Link className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group" href="/policies/terms">
+<span className="material-symbols-outlined group-hover:scale-110 transition-transform">policy</span>
+<span className="text-sm font-medium tracking-wide">Privacy Policy</span>
+</Link>
+</div>
+<div className="flex flex-col items-center gap-4">
+<div className="w-12 h-px bg-slate-800"></div>
+<p className="text-slate-600 text-xs font-normal">© 2024 Sanwariya Gold. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+    </>
+  );
+}

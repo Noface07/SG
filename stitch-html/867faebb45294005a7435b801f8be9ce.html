@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sanwariya Gold - Cart</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ecc813",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221f10", // Theme dark background
+                        "drawer-bg": "#0D0906", // Specific request background
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Grain Texture Simulation */
+        .bg-grain {
+            position: relative;
+        }
+        .bg-grain::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden h-screen w-full flex">
+<!-- Backdrop / Main Content Area (Blurred/Dimmed to focus on Drawer) -->
+<div aria-hidden="true" class="flex-1 flex flex-col relative opacity-40 pointer-events-none hidden md:flex">
+<!-- Reusing TopNavBar structure for the background visual context -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#393628] px-10 py-3 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Sanwariya Gold</h2>
+</div>
+<div class="flex items-center gap-9">
+<span class="text-sm font-medium leading-normal">Collections</span>
+<span class="text-sm font-medium leading-normal">Atelier</span>
+<span class="text-sm font-medium leading-normal">Heritage</span>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex gap-2">
+<div class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-[#393628]">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<div class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-[#393628]">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Background Grid of Items -->
+<div class="p-10 grid grid-cols-3 gap-8 opacity-50">
+<div class="aspect-[3/4] bg-slate-200 dark:bg-[#393628] rounded-lg"></div>
+<div class="aspect-[3/4] bg-slate-200 dark:bg-[#393628] rounded-lg"></div>
+<div class="aspect-[3/4] bg-slate-200 dark:bg-[#393628] rounded-lg"></div>
+</div>
+</div>
+<!-- Cart Side Drawer -->
+<div class="relative z-10 w-full md:w-[480px] h-full flex flex-col border-l border-slate-200 dark:border-[#393628] shadow-2xl bg-drawer-bg bg-grain">
+<!-- Header -->
+<div class="flex items-center justify-between px-8 py-6 border-b border-primary/20 relative z-10">
+<h2 class="text-primary text-xl font-display italic tracking-wide">Your Cart</h2>
+<button class="text-slate-400 hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Empty State Content -->
+<div class="flex-1 flex flex-col items-center justify-center px-8 relative z-10 text-center">
+<!-- Lotus Icon -->
+<div class="mb-8 text-primary/30 transform transition-transform duration-700 hover:scale-105">
+<span class="material-symbols-outlined" style="font-size: 120px; font-weight: 200;">local_florist</span>
+</div>
+<!-- Text Content -->
+<div class="space-y-4 max-w-xs mx-auto">
+<p class="text-[#F5F5DC] text-2xl font-display italic leading-tight tracking-wide">
+                    Your collection awaits
+                </p>
+<p class="text-slate-400 text-base font-display font-light leading-relaxed">
+                    You have not yet selected a piece. <br/>Browse our atelier.
+                </p>
+</div>
+<!-- CTA Button -->
+<button class="mt-12 group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-display font-medium tracking-widest text-primary border border-primary/40 hover:border-primary rounded transition-all duration-300 bg-transparent hover:bg-primary/5">
+<span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-primary rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+<span class="relative flex items-center gap-2 text-sm uppercase">
+                    Explore Collections 
+                    <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+</button>
+</div>
+<!-- Footer / Decorative Bottom -->
+<div class="p-8 border-t border-primary/10 relative z-10">
+<div class="flex justify-between items-center text-xs text-slate-500 font-display tracking-widest uppercase">
+<span>Sanwariya Gold</span>
+<span>Est. 1982</span>
+</div>
+</div>
+</div>
+</body></html>

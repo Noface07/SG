@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout Step 1: Shipping Details - Sanwariya Gold</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Cinzel:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ecc813", // Gold
+                        "primary-dark": "#b89a0a",
+                        "maroon": "#800020",
+                        "maroon-light": "#9e1b32",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#0D0906", // Deep black/brown as requested
+                        "surface-dark": "#1a1612",
+                        "border-gold": "#544f3b",
+                        "text-muted": "#b9b49d",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "cinzel": ["Cinzel", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0906; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ecc813; 
+        }
+        
+        .gold-glow:focus-within {
+            box-shadow: 0 0 10px rgba(236, 200, 19, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+<!-- Header -->
+<header class="flex items-center justify-between border-b border-[#393628] bg-[#0D0906]/95 backdrop-blur-sm px-6 lg:px-12 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+</div>
+<h1 class="text-white text-xl lg:text-2xl font-cinzel font-bold tracking-wide">SANWARIYA GOLD</h1>
+</div>
+<!-- Progress Steps -->
+<div class="hidden md:flex items-center gap-2">
+<span class="text-primary font-bold text-sm tracking-widest font-cinzel border-b-2 border-primary pb-1">1 SHIPPING</span>
+<span class="text-[#393628] mx-2">——</span>
+<span class="text-text-muted font-medium text-sm tracking-widest font-cinzel opacity-50">2 REVIEW</span>
+<span class="text-[#393628] mx-2">——</span>
+<span class="text-text-muted font-medium text-sm tracking-widest font-cinzel opacity-50">3 PAYMENT</span>
+</div>
+<div class="flex items-center gap-2 text-text-muted bg-[#393628]/30 px-3 py-1.5 rounded-lg border border-[#393628]">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span class="text-xs font-bold tracking-wider uppercase">Secure SSL</span>
+</div>
+</header>
+<!-- Main Layout -->
+<main class="flex-grow flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto">
+<!-- Left: Form Section -->
+<div class="flex-1 px-6 lg:px-16 py-10 lg:py-16">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-3xl lg:text-4xl font-bold text-white mb-8 font-cinzel">Shipping Details</h2>
+<!-- Warning Banner -->
+<div class="mb-10 bg-maroon/20 border border-maroon text-maroon-light p-4 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined shrink-0 mt-0.5">warning</span>
+<div>
+<p class="font-bold text-sm mb-1 text-[#ffcccb]">High Value Order (&gt; ₹5 Lakh)</p>
+<p class="text-sm opacity-90 text-slate-200">Due to insurance regulations, orders above ₹5L require scheduled secure delivery verification via phone confirmation.</p>
+</div>
+</div>
+<!-- Form -->
+<form class="space-y-8">
+<!-- Contact Info -->
+<div class="space-y-6">
+<h3 class="text-primary text-lg font-cinzel font-medium tracking-wide border-b border-[#393628] pb-2">Contact Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">First Name</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="Enter first name" type="text"/>
+</div>
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">Last Name</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="Enter last name" type="text"/>
+</div>
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="+91" type="tel"/>
+</div>
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+</div>
+<!-- Address -->
+<div class="space-y-6 pt-4">
+<h3 class="text-primary text-lg font-cinzel font-medium tracking-wide border-b border-[#393628] pb-2">Delivery Address</h3>
+<div class="space-y-6">
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">Street Address</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="Flat No, Building, Street" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">City</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="Mumbai" type="text"/>
+</div>
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">State</label>
+<select class="w-full bg-[#0D0906] border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors">
+<option>Maharashtra</option>
+<option>Delhi</option>
+<option>Karnataka</option>
+<option>Gujarat</option>
+</select>
+</div>
+<div class="group">
+<label class="block text-text-muted text-sm font-medium mb-2 uppercase tracking-wider">Pincode</label>
+<input class="w-full bg-transparent border-0 border-b border-[#544f3b] text-white px-0 py-2 focus:ring-0 focus:border-primary transition-colors placeholder-[#393628]" placeholder="400001" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Delivery Options -->
+<div class="space-y-6 pt-4">
+<h3 class="text-primary text-lg font-cinzel font-medium tracking-wide border-b border-[#393628] pb-2">Delivery Method</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Standard -->
+<label class="cursor-pointer relative group/card">
+<input checked="" class="peer sr-only" name="delivery" type="radio"/>
+<div class="h-full border border-[#393628] bg-surface-dark p-4 rounded-lg peer-checked:border-primary peer-checked:bg-primary/5 transition-all hover:border-[#6b6652]">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-2xl">local_shipping</span>
+<div class="h-4 w-4 rounded-full border border-[#544f3b] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2 w-2 rounded-full bg-[#0D0906] opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<span class="font-bold text-white text-lg font-cinzel">Standard</span>
+<span class="text-sm text-text-muted">Secure Insured Delivery</span>
+<span class="text-primary font-bold mt-2">FREE</span>
+</div>
+</div>
+</label>
+<!-- Express -->
+<label class="cursor-pointer relative group/card">
+<input class="peer sr-only" name="delivery" type="radio"/>
+<div class="h-full border border-[#393628] bg-surface-dark p-4 rounded-lg peer-checked:border-primary peer-checked:bg-primary/5 transition-all hover:border-[#6b6652]">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+<div class="h-4 w-4 rounded-full border border-[#544f3b] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2 w-2 rounded-full bg-[#0D0906] opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<span class="font-bold text-white text-lg font-cinzel">Express</span>
+<span class="text-sm text-text-muted">Next Day Delivery</span>
+<span class="text-primary font-bold mt-2">₹ 999</span>
+</div>
+</div>
+</label>
+<!-- Pickup -->
+<label class="cursor-pointer relative group/card">
+<input class="peer sr-only" name="delivery" type="radio"/>
+<div class="h-full border border-[#393628] bg-surface-dark p-4 rounded-lg peer-checked:border-primary peer-checked:bg-primary/5 transition-all hover:border-[#6b6652]">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-2xl">storefront</span>
+<div class="h-4 w-4 rounded-full border border-[#544f3b] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2 w-2 rounded-full bg-[#0D0906] opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<span class="font-bold text-white text-lg font-cinzel">Atelier</span>
+<span class="text-sm text-text-muted">Pickup from Store</span>
+<span class="text-primary font-bold mt-2">FREE</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</form>
+<!-- Mobile only CTA (hidden on desktop) -->
+<div class="lg:hidden mt-8">
+<button class="w-full bg-maroon hover:bg-maroon-light text-white font-cinzel font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-maroon/20">
+                        CONTINUE TO REVIEW
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Order Summary (Sticky Sidebar) -->
+<div class="hidden lg:block w-[40%] bg-surface-dark border-l border-[#393628] relative">
+<div class="sticky top-[85px] p-10 h-[calc(100vh-85px)] overflow-y-auto custom-scrollbar flex flex-col">
+<h2 class="text-2xl font-bold text-white mb-6 font-cinzel tracking-wide">Order Summary</h2>
+<!-- Items List -->
+<div class="flex-grow space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-24 h-24 rounded-lg overflow-hidden border border-[#393628] bg-[#27251c] flex-shrink-0 relative">
+<img alt="Intricate gold necklace on black velvet" class="w-full h-full object-cover" data-alt="Intricate traditional gold necklace close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9gtrA93Z7wOtBolotL5hQWQQw448FCXRNBNdbBsY4JzQk2NT0RK81ZJaTotuTOGlBYxDO4fIP3k8Gaphmh_Uginq3x9i8nyrpgKj8jVA7t0EpsYFv0wdz0jjQ258QgalLdFZ7SLnV7bOOU-rYcqcLCYhnmRFxh6U4WjRSuCfvq33aKb5ExuUyYLAIGDq5j8Ck2XLqcKXMlCiZwvmwc0GxOwCa7S2d2I7G2nc3kvS9xEwfbahS-euTe2Z3Z7J5KlFhqJEqQRj5oA"/>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="text-white font-serif font-semibold text-lg leading-tight">Royal Kundan Necklace</h4>
+<p class="text-text-muted text-sm mt-1">22k Gold • 85g</p>
+<p class="text-primary font-bold mt-2 font-cinzel">₹ 12,50,000</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-24 h-24 rounded-lg overflow-hidden border border-[#393628] bg-[#27251c] flex-shrink-0 relative">
+<img alt="Solid gold bangle bracelet" class="w-full h-full object-cover" data-alt="Thick solid gold bangle bracelet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5dsppkypfJyw1KO7vNdpIKohQuEMiGUAa6h4EOlqATCIa0vDd_Z05pn9du8JF2OZiCoGM7RvnqtNgCYyXbxirbCwYdyiUasAICSQgAy5f9moYpLbHUihgjYj27cHg9sEtXGkkst1-iJq87YXG6fmAmUNJOKuk6dDziSCzwDzUkoYaj7KBgGFyjKR8Uc0nJXPlRreNQ_3hLCpGwd0ZEtZx23asuhv59Q4F3jdU_RJfXSmRcFBptg3qMrAsrDcQNrtGPUM1u56n2Q"/>
+</div>
+<div class="flex flex-col flex-grow">
+<h4 class="text-white font-serif font-semibold text-lg leading-tight">Heritage Bangle Set</h4>
+<p class="text-text-muted text-sm mt-1">22k Gold • 82g</p>
+<p class="text-primary font-bold mt-2 font-cinzel">₹ 8,90,000</p>
+</div>
+</div>
+</div>
+<!-- Gold Weight Summary -->
+<div class="bg-[#27251c]/50 p-4 rounded-lg mb-6 border border-[#393628] flex justify-between items-center">
+<span class="text-text-muted text-sm uppercase tracking-widest">Total Gold Weight</span>
+<span class="text-primary font-bold font-cinzel text-lg">167g</span>
+</div>
+<!-- Price Breakdown -->
+<div class="border-t border-[#393628] pt-6 space-y-3 mb-8">
+<div class="flex justify-between text-text-muted">
+<span>Subtotal</span>
+<span class="text-white font-cinzel">₹ 21,40,000</span>
+</div>
+<div class="flex justify-between text-text-muted">
+<span>Making Charges</span>
+<span class="text-white font-cinzel">₹ 1,50,000</span>
+</div>
+<div class="flex justify-between text-text-muted">
+<span>GST (3%)</span>
+<span class="text-white font-cinzel">₹ 69,800</span>
+</div>
+<div class="flex justify-between text-text-muted">
+<span>Shipping</span>
+<span class="text-primary font-cinzel text-sm uppercase">Free</span>
+</div>
+</div>
+<!-- Total -->
+<div class="border-t border-[#393628] pt-6 mb-8">
+<div class="flex justify-between items-baseline">
+<span class="text-white text-lg font-bold">Total</span>
+<span class="text-primary text-3xl font-bold font-cinzel">₹ 23,59,800</span>
+</div>
+<p class="text-right text-xs text-text-muted mt-2">Inclusive of all taxes</p>
+</div>
+<!-- CTA -->
+<button class="w-full bg-maroon hover:bg-maroon-light text-white font-cinzel font-bold py-4 rounded-lg transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-maroon/20">
+                    CONTINUE TO REVIEW
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>
