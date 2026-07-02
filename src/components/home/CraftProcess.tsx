@@ -9,19 +9,19 @@ const steps = [
         id: 1,
         title: "Ghaat (Framework)",
         desc: "The base structural framework is shaped from pure 24K gold alloyed to 22K by master chiterias.",
-        image: "https://images.unsplash.com/photo-1599643477874-ec5d7f8d6de9?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: 2,
         title: "Meenakari (Enameling)",
         desc: "Vibrant colors are painted onto the reverse by our master painters, then baked in fires of devotion.",
-        image: "https://images.unsplash.com/photo-1620658461876-0bfdc5bd3a6a?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: 3,
         title: "Jadai (Setting)",
         desc: "Uncut polki diamonds and precious stones are meticulously set into the gold using pure 24K foil.",
-        image: "https://images.unsplash.com/photo-1650720452335-eec32ca181cb?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=800"
     },
     {
         id: 4,

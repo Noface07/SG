@@ -2,10 +2,12 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
-import Image from 'next/image';
 import { GoldButton } from '@/components/ui/GoldButton';
 
 const TITLE = 'SANWARIYA'.split('');
+
+// Place your video file at public/assets/hero.mp4
+const VIDEO_SRC = '/assets/hero.mp4';
 
 // Deterministic positions to avoid hydration mismatches
 const PARTICLES = Array.from({ length: 22 }, (_, i) => ({
@@ -29,10 +31,10 @@ export function HeroCinematic() {
     const mouseY = useMotionValue(0);
     const springX = useSpring(mouseX, { stiffness: 60, damping: 20 });
     const springY = useSpring(mouseY, { stiffness: 60, damping: 20 });
-    const imageX = useTransform(springX, (v) => v * 34);
-    const imageY = useTransform(springY, (v) => v * 34);
-    const titleX = useTransform(springX, (v) => v * -16);
-    const titleY = useTransform(springY, (v) => v * -16);
+    const videoX = useTransform(springX, (v) => v * 18);
+    const videoY = useTransform(springY, (v) => v * 18);
+    const titleX = useTransform(springX, (v) => v * -14);
+    const titleY = useTransform(springY, (v) => v * -14);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -44,10 +46,29 @@ export function HeroCinematic() {
         <section
             ref={containerRef}
             onMouseMove={handleMouseMove}
-            className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_#3D0A14_0%,_#0D0906_70%)] dark-grain-overlay"
+            className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#0D0906] dark-grain-overlay"
         >
+            {/* Full-bleed video background with cursor drift */}
+            <motion.div style={{ x: videoX, y: videoY }} className="absolute -inset-[3%] z-0 scale-[1.04]">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover"
+                    src={VIDEO_SRC}
+                />
+                {/* Legibility overlays */}
+                <div className="absolute inset-0 bg-[#0D0906]/50" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_20%,_#0D0906_95%)]" />
+            </motion.div>
+
+            {/* Blend into the next section */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0D0906] to-transparent z-[2] pointer-events-none" />
+
             {/* Floating gold dust */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-0 z-[1] pointer-events-none">
                 {PARTICLES.map((p, i) => (
                     <motion.span
                         key={i}
@@ -58,27 +79,6 @@ export function HeroCinematic() {
                     />
                 ))}
             </div>
-
-            {/* Necklace floating behind the typography, drifting against the cursor */}
-            <motion.div
-                style={{ x: imageX, y: imageY }}
-                className="absolute z-[1] w-72 md:w-[480px] lg:w-[560px] opacity-80"
-            >
-                <div className="absolute inset-0 bg-gold/20 blur-[90px] rounded-full" />
-                <motion.div
-                    animate={{ y: [0, -14, 0] }}
-                    transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                    <Image
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIRGBB1glR54gvU19LoGEF6MoJbpLLx8jF5cSmEuCSa0OJ_NM-Hz39-UuEr6CFpNXH3pngoaFUzkaoVVFRi7Tl6LW0WgtjQShkS7mJPBv_wuBAy85cn8Wv6HyAHms5vrQ-sMoD2S6GoFWD-Ull-6qUerudzBt-bVWLoqQ3YGhi98taLU87uMhTK2EMKP5SzbJZZAMMeLzjJ9TDhbkr67hmDJKV16d8xzdGSZf9w1Pwp67gzqXUgs-RWpfIjv6NDtjVj-t5hPpgtQ"
-                        alt="Intricate golden Jadau bridal necklace glowing in the dark"
-                        width={600}
-                        height={600}
-                        className="relative z-10 w-full h-auto object-contain drop-shadow-2xl"
-                        priority
-                    />
-                </motion.div>
-            </motion.div>
 
             {/* Foreground content, drifting with the cursor */}
             <motion.div
