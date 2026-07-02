@@ -1,5 +1,21 @@
-import { Stitch_3d827f1b76854de8846d861daedbd00e } from "@/components/stitch/Stitch_3d827f1b76854de8846d861daedbd00e";
+import { PageHero } from '@/components/ui/PageHero';
+import { HeritageStory } from '@/components/home/HeritageStory';
+import { CraftProcess } from '@/components/home/CraftProcess';
+import { BespokeTeaser } from '@/components/home/BespokeTeaser';
 
-export default function Page() {
-  return <Stitch_3d827f1b76854de8846d861daedbd00e />;
+export const metadata = { title: 'Our Legacy | Sanwariya Gold' };
+
+export default function HeritagePage() {
+    return (
+        <>
+            <PageHero
+                eyebrow="Chittorgarh · Rajasthan"
+                title={<>The Legacy of <em className="italic font-light text-shimmer">Mewar</em></>}
+                subtitle="Four generations of karigars, one unbroken chain of devotion."
+            />
+            <HeritageStory />
+            <CraftProcess />
+            <BespokeTeaser />
+        </>
+    );
 }
