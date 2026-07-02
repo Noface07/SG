@@ -70,7 +70,7 @@ export default function HeritagePage() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="font-label text-gold tracking-[0.45em] uppercase text-xs md:text-sm mb-6"
                     >
-                        Chittorgarh \u00b7 Since 1962
+                        Chittorgarh · Since 1962
                     </motion.p>
                     <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-cream leading-[1.05]">
                         <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.45 }} className="block">
@@ -129,7 +129,7 @@ export default function HeritagePage() {
                     <div className="text-center mb-16 md:mb-20">
                         <span className="font-label text-gold tracking-[0.4em] uppercase text-xs block mb-4">The Craft</span>
                         <h2 className="font-heading text-4xl md:text-6xl">
-                            Four Months \u00b7 Eight Hands \u00b7 <span className="italic font-light text-shimmer">One Blessing</span>
+                            Four Months · Eight Hands · <span className="italic font-light text-shimmer">One Blessing</span>
                         </h2>
                     </div>
 

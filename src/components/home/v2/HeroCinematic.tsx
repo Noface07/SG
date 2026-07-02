@@ -91,7 +91,7 @@ export function HeroCinematic() {
                     transition={{ delay: 2.1, duration: 0.8 }}
                     className="font-label text-[10px] md:text-xs tracking-[0.5em] uppercase text-cream/70 mb-6"
                 >
-                    Est. in Mewar \u00b7 Chittorgarh, Rajasthan
+                    Est. in Mewar · Chittorgarh, Rajasthan
                 </motion.p>
 
                 <h1 className="flex overflow-hidden font-heading text-[13vw] md:text-8xl lg:text-9xl leading-none text-cream drop-shadow-2xl">
