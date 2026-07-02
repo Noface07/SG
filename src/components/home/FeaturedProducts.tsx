@@ -13,7 +13,7 @@ const products = [
         name: 'Meera Jhumka',
         price: 125000,
         slug: 'meera-jhumka',
-        image: 'https://images.unsplash.com/photo-1535632066927-1428ef9182a4?auto=format&fit=crop&q=80&w=400'
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=400'
     },
     {
         id: '2',

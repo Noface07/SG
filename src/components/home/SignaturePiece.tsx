@@ -18,7 +18,7 @@ export function SignaturePiece() {
 
                 <div className="relative aspect-square md:aspect-video w-full rounded-sm overflow-hidden border border-gold/20 group">
                     <Image
-                        src="https://images.unsplash.com/photo-1599643478524-fbfa8c49e793?auto=format&fit=crop&q=80&w=1600"
+                        src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600"
                         alt="Padmini Bridal Haar Set"
                         fill
                         className="object-cover transition-transform duration-[20s] group-hover:scale-110"

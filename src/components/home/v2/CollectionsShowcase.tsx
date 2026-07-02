@@ -10,14 +10,14 @@ const COLLECTIONS = [
         title: 'Bridal Parures',
         tag: 'The Padmini Edit',
         href: '/collections?category=bridal-sets',
-        image: 'https://images.unsplash.com/photo-1599643478524-fbfa8c49e793?auto=format&fit=crop&q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1200',
         span: 'md:col-span-7',
     },
     {
         title: 'Jhumkas & Earrings',
         tag: 'Whispers of Mewar',
         href: '/collections?category=earrings',
-        image: 'https://images.unsplash.com/photo-1535632066927-1428ef9182a4?auto=format&fit=crop&q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=1200',
         span: 'md:col-span-5',
     },
     {
