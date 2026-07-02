@@ -39,7 +39,31 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-gradient': 'radial-gradient(circle at center, #3D0A14 0%, #0D0906 100%)',
-      }
+      },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in-down": {
+          from: { opacity: "0", transform: "translateY(-16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 1.2s ease-out both",
+        "fade-in-down": "fade-in-down 0.8s ease-out both",
+        "float": "float 6s ease-in-out infinite",
+        "shimmer": "shimmer 4s linear infinite",
+      },
     },
   },
   plugins: [],

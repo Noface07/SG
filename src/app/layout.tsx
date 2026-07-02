@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Cinzel_Decorative, EB_Garamond, Noto_Serif_Devanaga
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { CartDrawer } from "@/components/layout/CartDrawer";
+import { Footer } from "@/components/layout/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -45,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
@@ -54,6 +55,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        <Footer />
         <CartDrawer />
       </body>
     </html>
